@@ -3,16 +3,25 @@
 __author__ = "Beerdavinder Singh"
 __version__ = ""
 
-from shape.shape import Shape
+from shape.shape import shape
 import math
 
-class Triangle(Shape):
+class Triangle(shape):
     """
+    A class that represents a triangle.
     """
-    def _init_(self, color: str, side_1:int, side_2: int, side_3:int):
+    def init(self, color: str, side_1:int, side_2: int, side_3:int):
         """
+        Args:
+            color (str): The color of the triangle.
+            side_1 (int): Length of the first side of the triangle.
+            side_2 (int): Length of the second side of the triangle.
+            side_3 (int): Length of the third side of the triangle.
+
+        Raises:
+            ValueError: If it does not match the triangle Inequality theorm.
         """
-        super()._init_(color)
+        super().init(color)
 
         if not isinstance(side_1, int):
             raise ValueError("Side 1 must be numeric")
@@ -30,15 +39,17 @@ class Triangle(Shape):
         self._side_2 = side_2
         self._side_3 = side_3
 
-    def _str_(self) -> str:
+    def str(self) -> str:
         """
+        Returns a description of the triangle
         """
-        value = super()._str_()
+        value = super().str()
         value+= f"\n This triangle has three sides with the lengths of {self._side_1}, {self._side_2}, and {self._side_3} centimeters."
         return value
     
     def calcualte_area(self) -> float:
         """
+        Calculates the area of the triangle.
         """
         semi_perimeter = (self._side_1 + self._side_2 + self._side_3) / 2
         area = math.sqrt(semi_perimeter * (semi_perimeter - self._side_1) *
@@ -47,5 +58,6 @@ class Triangle(Shape):
     
     def calculate_perimeter(self) -> float:
         """
+        Calculates the perimeter of the triangle.
         """
         return (self._side_1 + self._side_2 + self._side_3)
