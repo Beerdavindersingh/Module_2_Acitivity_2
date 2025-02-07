@@ -13,11 +13,11 @@ import unittest
 import math
 from shape.triangle import Triangle
 
-class Triangletests(unittest.TestCase):
+class Triangletestclass(unittest.TestCase):
     """
     A class that contains unit tests for the Triangle class.
     """
-    def setup(self):
+    def Setup(self):
         """
         This method sets up a default attributes.
         """

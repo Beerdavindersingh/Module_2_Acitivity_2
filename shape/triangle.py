@@ -10,7 +10,7 @@ class Triangle(shape):
     """
     A class that represents a triangle.
     """
-    def init(self, color: str, side_1:int, side_2: int, side_3:int):
+    def __init__(self, color: str, side_1:int, side_2: int, side_3:int):
         """
         Args:
             color (str): The color of the triangle.
@@ -21,7 +21,7 @@ class Triangle(shape):
         Raises:
             ValueError: If it does not match the triangle Inequality theorm.
         """
-        super().init(color)
+        super().__init__(color)
 
         if not isinstance(side_1, int):
             raise ValueError("Side 1 must be numeric")
@@ -39,12 +39,12 @@ class Triangle(shape):
         self._side_2 = side_2
         self._side_3 = side_3
 
-    def str(self) -> str:
+    def __str__(self) -> str:
         """
         Returns a description of the triangle
         """
-        value = super().str()
-        value+= f"\n This triangle has three sides with the lengths of {self._side_1}, {self._side_2}, and {self._side_3} centimeters."
+        value = super().__str__()
+        value+= f"\nThis triangle has three sides with the lengths of {self._side_1}, {self._side_2}, and {self._side_3} centimeters."
         return value
     
     def calculate_area(self) -> float:

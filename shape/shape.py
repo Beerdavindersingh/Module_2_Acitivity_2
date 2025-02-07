@@ -9,7 +9,7 @@ class shape(ABC):
     """
     A class for shapes.
     """
-    def _init_(self, color: str):
+    def __init__(self, color: str):
         """
         Args:
         color (str): The color of the shape.
@@ -20,14 +20,14 @@ class shape(ABC):
             raise ValueError("Color cannot be blank")
         self._color = color.strip()
 
-    def _str_(self) -> str:
+    def __str__(self) -> str:
         """
         Returns with the shape's color.
         """
         return f"The shape color is {self._color}."
     
     @abstractmethod
-    def calcualte_area(self) -> float:
+    def calculate_area(self) -> float:
         """
         This method is defined to calculate its area.
         """
