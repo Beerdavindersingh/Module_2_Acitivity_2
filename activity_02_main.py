@@ -4,7 +4,7 @@ classes.
 
 _author_ = "ACE Faculty"
 _version_ = ""
-_credits_ = "Beerdavinder Singh1"
+_credits_ = "Beerdavinder Singh"
 
 from shape.shape import *
 from shape.triangle import Triangle

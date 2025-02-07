@@ -9,8 +9,9 @@ This activity will help to reinforce learning of the Module 2 concepts of:
 
 ## Author
 
-[Your name]
+[Beerdavinder Singh]
 
 ## Additional Information
 
-[ Use this space to include additional information that may help in your learning. ]
+[Classes and subclasses learned
+abstraction, inheritance, package initialization, polymorphism leanred]
