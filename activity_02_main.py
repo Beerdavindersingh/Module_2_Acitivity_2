@@ -1,3 +1,11 @@
+""""A client program written to verify correctness of the activity 
+classes.
+"""
+
+_author_ = "ACE Faculty"
+_version_ = ""
+_credits_ = "Beerdavinder Singh1"
+
 from shape.shape import *
 from shape.triangle import Triangle
 from shape.rectangle import Rectangle
